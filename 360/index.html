@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>360影视-更新更全更受欢迎的影视网站-在线观看</title>
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+	  	var SearchNode=$('.movie_suggest_query');
+	  	var suggestWrap=$('#movie_suggest_wrap');
+	  	$('.iconSquare:gt(2)').css("background-color","#e7e7e7");
+	  	function hover(parent,sibling){
+	  		parent.hover(function(){
+	  			sibling.fadeIn();
+	  		},function(){
+	  			sibling.fadeOut();
+	  		});
+	  	}
+	  	$('.gplay-icon').hover(function(){
+	  		$(this).addClass('js-icon');
+	  	},function(){
+	  		$(this).removeClass('js-icon');
+	  	});
+	  	hover($('.ucenter_record_item'),$('.ucenter_record_layer'));
+	  	hover($('.ucenter_app_icon'),$('.ucenter_app_layer'));
+	  	hover($('.TV_layer'),$('.TV_layer_list'));
+	  	hover($('.movie_layer'),$('.movie_layer_list'));
+	  	SearchNode.focus(function(){
+	  		$(this).attr("value","");
+	  		suggestWrap.show();
+	  	});
+	  	SearchNode.blur(function(){
+	  		$(this).attr("value","锦绣未央");
+	  		suggestWrap.hide();
+	  	});
+	  	var rBtn=$('#rBtn');
+	  	var leftBtn=$('#leftBtn');
+	  	var count=0;
+	  	rBtn.bind('click',function(){
+	  		count++;
+	  		if(count==$('.slider_item').length){
+	  			count=0;
+	  			for(let i=0;i<=$('.slider_item').length-1;i++){
+		  			var _self=$('.slider_item')[i];
+		  			_self.style.left=(parseInt(_self.style.left)+1180*($('.slider_item').length-1))+'px';
+	  			}
+	  			
+	  		}else{
+	  			for(let i=0;i<$('.slider_item').length;i++){
+		  			var _self=$('.slider_item')[i];
+		  			_self.style.left=(parseInt(_self.style.left)-1180)+'px';
+	  			}
+	  			console.log(count);
+	  			
+	  		}
+	  		
+	  	});
+	  	
+ });	
+  </script>
+</head>
+<body>
+  <div class="movie_header">
+    <div class="movie_header_top">
+      <a href="http://www.360kan.com" class="head_logo" target="_self">
+        <img src="http://p8.qhimg.com/t019bf1952b1ad22b90.png"/>
+      </a>
+      <div class="movie_header_ad_wrap">
+        <a href="###" class="movies_header_ad">
+          <img src="http://p1.qhimg.com/t01d7d7051bd6dd8a07.png"/>
+        </a>
+      </div>
+      <div class="movie_header_s">
+        <form action="" method="GET" target="_top" id="search-form" class="movie_search">
+          <div id="movie_suggest" class="movie_suggest">
+            <input id="movie_suggest_query" class="movie_suggest_query" value="锦绣未央" autocomplete="off" placeholder=""/>
+          </div>
+          <div id="movie_suggest_wrap" style="display:none;">
+            <ul class="suggest_list">
+              <li class="suggest_item" data-q="锦绣未央" data-attr="{"type":"none","id":""}">
+                <em class="iconSquare">1</em>
+                <span>锦绣未央</span>
+              </li>
+              <li class="suggest_item" data-q="锦绣未央" data-attr="{"type":"none","id":""}">
+                <em class="iconSquare">2</em>
+                <span>真正男子汉 第二季</span>
+              </li>
+              <li class="suggest_item" data-q="锦绣未央" data-attr="{"type":"none","id":""}">
+                <em class="iconSquare">3</em>
+                <span>蜂鸟</span>
+              </li>
+              <li class="suggest_item" data-q="锦绣未央" data-attr="{"type":"none","id":""}">
+                <em class="iconSquare">4</em>
+                <span>爸爸去哪里</span>
+              </li>
+              <li class="suggest_item" data-q="锦绣未央" data-attr="{"type":"none","id":""}">
+                <em class="iconSquare">4</em>
+                <span>爸爸去哪里</span>
+              </li>
+            </ul>
+          </div>
+          <div class="movie_search_btn">
+            <input id="search_btn" class="search_btn" type="submit" value=""/>
+            <label for="search_btn">搜索</label>
+          </div>
+        </form>
+      </div>
+        <div class="movie_header_u">
+          <div  class="ucenter_wrap">
+            <div class="ucenter_mine">
+              <a href="###" target="_self" class="ucenter_item ucenter_login">立刻登录</a>
+            </div>
+            <span class="ucenter_line"></span>
+            <div class="ucenter_record">
+              <a href="###" target="_self" class="ucenter_item ucenter_record_item">观看记录</a>
+              <div class="ucenter_record_layer" style='display:none;'>
+                <div id="record_layer_inner">
+                    <p class="record_layer_arrow"></p>
+                    <div class="record_layer_wrap_scroll">
+                      <div class="record_list_container">
+                        <p class="earlier">更早</p>
+                        <ul>
+                          <li>
+                            <a href="###" class="record_list">消失的凶手</a>
+                            <span class="kindVideo">电影</span>
+                            <a id="212396" class="record_delete" title="删除" href="javascript:;"></a>
+                          </li>
+                          <li>
+                            <a href="###" class="record_list">麻辣变形计</a>
+                            <span class="kindVideo">电视剧</span>
+                            <a id="212396" class="record_delete" title="删除" href="javascript:;"></a>
+                          </li>
+                          <li>
+                            <a href="###" class="record_list">使徒行者</a>
+                            <span class="kindVideo">电视剧</span>
+                            <a id="212396" class="record_delete" title="删除" href="javascript:;"></a>
+                          </li>
+                        </ul>
+                        <p id="allDelete"><a href="###" class="">全部清除</a></p>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <span class="ucenter_line"></span>
+            <div class="ucenter_app">
+              <a href="###" target="_self" class="ucenter_item ucenter_app_icon">APP下载</a>
+              <div class="ucenter_app_layer" style="display:none;">
+                <div id="app_layer_inner">
+                    <p class="record_layer_arrow"></p>
+                    <img src="http://p8.qhimg.com/t01b9cd4ffee2107eb2.png"/>
+                    <p class="app-desc">手机扫描下载影视大全APP</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+  
+	  <div class="movie_header_bottom">
+			<div class="movie_header_bottom_content">
+				<ul id="leftNav">
+					<li class="nav_item_wrap current"><a href="###" class="nav_item">首页</a></li>
+					<li class="nav_item_wrap">
+						<a href="###" class="nav_item TV_layer">电视剧</a>
+						<div class=" child_menu TV_layer_list" style="display:none;">
+							<b class="eb-head-bg"></b>
+							<ul class="layer_list ">
+								<li class="layer_list_item">
+									<a href="###">电视剧首页</a>
+								</li>
+								<li class="layer_list_item">
+									<a href="###">内地</a>
+								</li>
+								<li class="layer_list_item">
+									<a href="###">美剧</a>
+								</li>
+								<li class="layer_list_item">
+									<a href="###">TVB</a>
+								</li>
+								<li class="layer_list_item">
+									<a href="###">台剧</a>
+								</li>
+								<li class="layer_list_item">
+									<a href="###">泰剧</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="nav_item_wrap"><a href="###" class="nav_item">综艺</a></li>
+					<li class="nav_item_wrap">
+						<a href="###" class="nav_item movie_layer">电影</a>
+						<div class="movie_layer_list child_menu" style="display:none;">
+							<b class="eb-head-bg"></b>
+							<ul class="layer_list">
+								<li class="layer_list_item">
+									<a href="###">电影首页</a>
+								</li>
+								<li class="layer_list_item">
+									<a href="###">电影馆</a>
+								</li>
+								<li class="layer_list_item">
+									<a href="###">付费电影</a>
+								</li>
+								<li class="layer_list_item">
+									<a href="###">网络电影</a>
+								</li>
+								
+							</ul>
+						</div>
+					</li>
+					<li class="nav_item_wrap"><a href="###" class="nav_item">音乐</a></li>
+					<li class="nav_item_wrap"><a href="###" class="nav_item">动漫</a></li>
+					<li class="nav_item_wrap"><a href="###" class="nav_item">资讯</a></li>
+					<li class="nav_item_wrap"><a href="###" class="nav_item">娱乐</a></li>
+					<li class="nav_item_wrap"><a href="###" class="nav_item">电视台</a></li>
+					<li class="nav_item_wrap"><a href="###" class="nav_item">广场舞</a></li>
+				</ul>
+				<ul id="rightNav">
+					<li class="nav_item_wrap"><a href="###" class="nav_item">音乐</a></li>
+					<li class="nav_item_wrap"><a href="###" class="nav_item">动漫</a></li>
+					<li class="nav_item_wrap"><a href="###" class="nav_item">资讯</a></li>
+					<li class="nav_item_wrap"><a href="###" class="nav_item">娱乐</a></li>
+				</ul>
+			</div>
+	    </div>
+	  </div>
+  <!-- 头部的结构 -->
+  <div class="sliderContainer">
+	<div class="sliderContainerContent">
+		<div class="slider_item" style="left:0;">
+			<a href="###" class="p0 gplay-icon">
+				<img src="img/01.jpg" alt="锦绣未央"/>
+				<span class="title">锦绣未央</span>
+				<span class="desc">皇上驾崩啦！拓跋余绝地反击 荣登皇位求娶未央</span>
+				<b></b>
+			</a>
+			<a href="###" class="p1 gplay-icon">
+				<img src="img/02.jpg" alt="火星情报局2"/>
+				<span class="title">火星情报局2</span>
+				<span class="desc">搞事情！陈赫撒娇雷翻全场 钱枫终得美人归</span>
+				<b></b>
+			</a>
+			<a href="###" class="p2 gplay-icon">
+				<img src="img/03.jpg" alt="火星情报局2"/>
+				<span class="title">真正男子汉2【预告】</span>
+				<span class="desc">杨幂家书喊话乖乖等我写给谁？</span>
+				<b></b>
+			</a>
+			<a href="###" class="p3 gplay-icon">
+				<img src="img/04.jpg" alt="火星情报局2"/>
+				<span class="title">相爱穿梭千年2</span>
+				<span class="desc">喜报！大山夫妇吻上了</span>
+				<b></b>
+			</a>
+			<a href="###" class="p4 gplay-icon">
+				<img src="img/05.jpg" alt="火星情报局2"/>
+				<span class="title">从你的全世界路过</span>
+				<span class="desc">豪华全明星阵容一起谈情说爱</span>
+				<b></b>
+			</a>
+		</div>
+		<div class="slider_item" style="left:1180px;">
+			<a href="###" class="p0 gplay-icon">
+				<img src="img/06.jpg" alt="锦绣未央"/>
+				<span class="title">锦绣未央</span>
+				<span class="desc">皇上驾崩啦！拓跋余绝地反击 荣登皇位求娶未央</span>
+				<b></b>
+			</a>
+			<a href="###" class="p1 gplay-icon">
+				<img src="img/07.jpg" alt="火星情报局2"/>
+				<span class="title">火星情报局2</span>
+				<span class="desc">搞事情！陈赫撒娇雷翻全场 钱枫终得美人归</span>
+				<b></b>
+			</a>
+			<a href="###" class="p2 gplay-icon">
+				<img src="img/08.png" alt="火星情报局2"/>
+				<span class="title">真正男子汉2【预告】</span>
+				<span class="desc">杨幂家书喊话乖乖等我写给谁？</span>
+				<b></b>
+			</a>
+			<a href="###" class="p3 gplay-icon">
+				<img src="img/08.jpg" alt="火星情报局2"/>
+				<span class="title">相爱穿梭千年2</span>
+				<span class="desc">喜报！大山夫妇吻上了</span>
+				<b></b>
+			</a>
+			<a href="###" class="p4 gplay-icon">
+				<img src="img/09.jpg" alt="火星情报局2"/>
+				<span class="title">从你的全世界路过</span>
+				<span class="desc">豪华全明星阵容一起谈情说爱</span>
+				<b></b>
+			</a>
+		</div>
+		<div class="slider_item" style="left:2360px;">
+			<a href="###" class="p0 gplay-icon">
+				<img src="img/10.jpg" alt="锦绣未央"/>
+				<span class="title">锦绣未央</span>
+				<span class="desc">皇上驾崩啦！拓跋余绝地反击 荣登皇位求娶未央</span>
+				<b></b>
+			</a>
+			<a href="###" class="p1 gplay-icon">
+				<img src="img/11.jpg" alt="火星情报局2"/>
+				<span class="title">火星情报局2</span>
+				<span class="desc">搞事情！陈赫撒娇雷翻全场 钱枫终得美人归</span>
+				<b></b>
+			</a>
+			<a href="###" class="p2 gplay-icon">
+				<img src="img/12.jpg" alt="火星情报局2"/>
+				<span class="title">真正男子汉2【预告】</span>
+				<span class="desc">杨幂家书喊话乖乖等我写给谁？</span>
+				<b></b>
+			</a>
+			<a href="###" class="p3 gplay-icon">
+				<img src="img/13.jpg" alt="火星情报局2"/>
+				<span class="title">相爱穿梭千年2</span>
+				<span class="desc">喜报！大山夫妇吻上了</span>
+				<b></b>
+			</a>
+			<a href="###" class="p4 gplay-icon">
+				<img src="img/14.jpg" alt="火星情报局2"/>
+				<span class="title">从你的全世界路过</span>
+				<span class="desc">豪华全明星阵容一起谈情说爱</span>
+				<b></b>
+			</a>
+		</div>
+		<b id="leftBtn"></b>
+		<b id="rBtn"></b>
+	</div>
+  </div>
+</body>
+</html>
